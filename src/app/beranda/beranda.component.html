@@ -1,6 +1,36 @@
+
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Beranda</h5>
     <p class="card-text">Hello Semoga Hari mu Menyenangkan :)</p>
   </div>
 </div>
+
+<div class="container pt-2">
+  <a href="/input" class="btn btn-primary">Tambah</a>
+</div>
+
+<div class="container pt-2">
+</div>
+<table class = "table table-success table-striped">
+  <thead>
+  <tr align="center">
+    <th > ID Kategory</th>
+    <th> ID Departemen</th>
+    <th> Nama</th>
+    <th> Deskripsi</th>
+    <th> Aksi</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Id of list" align="center">
+    <td>{{Id.category_id}}</td>
+    <td>{{Id.department_id}}</td>
+    <td>{{Id.name}}</td>
+    <td>{{Id.description}}</td>
+    <td>
+      <a href="/input" class="btn btn-primary m-2">Update</a>
+    <a href="/input" class="btn btn-primary m-2">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
