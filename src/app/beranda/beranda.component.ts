@@ -26,4 +26,10 @@ export class BerandaComponent implements OnInit {
       })
   }
 
+  deleteCateg(category_id:number):void {
+    this.mast.delete(category_id).subscribe(res => {
+      this.list = this.list.filter(item => item.category_id !== category_id);
+      console.log('Delete successfully')
+    })
+  }
 }

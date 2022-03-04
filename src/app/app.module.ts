@@ -9,8 +9,8 @@ import { ProfileComponent } from './profile/profile.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { InputComponent } from './input/input.component';
-import { DeleteComponent } from './delete/delete.component';
-import { UpdateComponent } from './update/update.component';
+// import { DeleteComponent } from './delete/delete.component';
+// import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { UpdateComponent } from './update/update.component';
     BerandaComponent,
     AboutComponent,
     ProfileComponent,
-    InputComponent,
-    DeleteComponent,
-    UpdateComponent
+    InputComponent
+    // DeleteComponent,
+    // UpdateComponent
   ],
   imports: [
     BrowserModule,

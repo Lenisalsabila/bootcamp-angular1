@@ -14,6 +14,9 @@ export class MasterService {
     return this.http.get(environment.baseUrl + '/list').pipe(map(data => data))
   }
   saveCategory( datak: Kategori): Observable<any>{
-    return this.http.post(environment.baseUrl + '/inputK', datak).pipe(map(data => data))
+    return this.http.post(environment.baseUrl + '/input', datak).pipe(map(data => data))
+  }
+  delete(category_id:any){
+    return this.http.delete(environment.baseUrl+ '/delete/{id}')
   }
 }
