@@ -17,6 +17,6 @@ export class MasterService {
     return this.http.post(environment.baseUrl + '/input', datak).pipe(map(data => data))
   }
   delete(category_id:any){
-    return this.http.delete(environment.baseUrl+ '/delete/{id}')
+    return this.http.delete(environment.baseUrl+ '/delete/' + category_id)
   }
 }

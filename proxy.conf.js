@@ -3,7 +3,7 @@ const PROXY_CONFIG =[
     context: [
       "/latihan"
     ],
-    target:"http://localhost:4200",
+    target:"http://localhost:8081",
     secure: false
   }
 ]
