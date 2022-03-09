@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { InputComponent } from './input/input.component';
+import {ToastNoAnimationModule} from "ngx-toastr";
 // import { DeleteComponent } from './delete/delete.component';
 // import { UpdateComponent } from './update/update.component';
 
@@ -27,7 +28,8 @@ import { InputComponent } from './input/input.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastNoAnimationModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

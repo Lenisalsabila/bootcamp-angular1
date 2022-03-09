@@ -18,6 +18,9 @@ const routes: Routes = [
   },
   {
     path:'input',component:InputComponent
+  },
+  {
+    path:'findById/:id',component:InputComponent
   }
 ];
 

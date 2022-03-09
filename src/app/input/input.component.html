@@ -1,28 +1,48 @@
-<form [formGroup]="formInput" (submit)="simpan()">
+<form [formGroup]="formInput" >
 
   <div class="row mb-3">
     <label class="col-sm-2 col-form-label">ID Kategori</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="ID Kategori" formControlName="category_id">
+      <input type="text" class="form-control" placeholder="ID Kategori" formControlName="category_id" >
     </div>
   </div>
+
   <div class="row mb-3">
     <label class="col-sm-2 col-form-label">ID Departemen</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" placeholder="ID Departemen" formControlName="department_id">
+      <input type="text" class="form-control" placeholder="ID Departemen" formControlName="department_id">
     </div>
   </div>
+
   <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Nama</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" placeholder="Nama" formControlName="name">
+
+      <span *ngIf="!formInput.get('name')?.valid && formInput.get('name')?.touched" class="error-block">
+        <span *ngIf="!formInput.get('name')?.errors?.['minlength']"
+              class="error-block">
+              Panjang Minimal 3
+        </span>
+          </span>
     </div>
   </div>
   <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Deskripsi</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" placeholder="Deskripsi" formControlName="description">
+
+      <span *ngIf="!formInput.get('description')?.valid && formInput.get('description')?.touched" class="error-block">
+        <span *ngIf="!formInput.get('description')?.errors?.['minlength']"
+              class="error-block">
+              Panjang Minimal 3
+        </span>
+          </span>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Simpan</button>
+  <button type="submit" (click)="simpan()" class="btn btn-primary">Simpan</button>
+<!--  <div class="col-sm-10">-->
+  <button type="submit" (click)="update()" class="btn btn-primary">Update</button>
+<!--  </div>-->
+
 </form>
